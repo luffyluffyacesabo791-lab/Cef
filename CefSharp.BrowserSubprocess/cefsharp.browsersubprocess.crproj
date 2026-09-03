@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputDir="Confused" baseDir="bin\x64\Release" xmlns="http://confuserex.xycraft.org">
+  <!-- Minimal obfuscation for CefSharp — WinForms + P/Invoke breaks under aggressive rename.
+       Only encrypt strings and disable debug/tamper detection. -->
+  <rule pattern="true" preset="none" inherit="false">
+    <protection id="rename" />
+    <protection id="anti debug" />
+    <protection id="anti ildasm" />
+    <protection id="constants" />
+    <protection id="resources" />
+  </rule>
+  <module path="CefSharp.BrowserSubprocess.exe" />
+</project>

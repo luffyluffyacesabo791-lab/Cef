@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net472</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extensions\set_page_color\icon.png" />
+    <Content Include="Extensions\set_page_color\popup.html" />
+    <Content Include="Extensions\set_page_color\popup.js" />
+    <Content Include="Resources\assets\css\docs.css" />
+    <Content Include="Resources\assets\css\shCore.css" />
+    <Content Include="Resources\assets\css\shCoreDefault.css" />
+    <Content Include="Resources\assets\js\application.js" />
+    <Content Include="Resources\assets\js\jquery.js" />
+    <Content Include="Resources\assets\js\shBrushCSharp.js" />
+    <Content Include="Resources\assets\js\shCore.js" />
+    <Content Include="Resources\BindingTestNetCore.html" />
+    <Content Include="Resources\BindingTestAsync.js" />
+    <Content Include="Resources\BindingTestSync.js" />
+    <Content Include="Resources\BindingTestsAsyncTask.html" />
+    <Content Include="Resources\BindingApiCustomObjectNameTest.html" />
+    <Content Include="Resources\BindingTestSingle.html" />
+    <Content Include="Resources\DragDropCursorsTest.html" />
+    <Content Include="Resources\ImageTest.html" />
+    <Content Include="Resources\HelloWorld.html" />
+    <Content Include="Resources\JavascriptCallbackTest.html" />
+    <Content Include="Resources\LegacyBindingTest.html" />
+    <Content Include="Resources\CdmSupportTest.html" />
+    <Content Include="Resources\CssAnimation.html" />
+    <Content Include="Resources\ExceptionTest.html" />
+    <Content Include="Resources\BindingTest.html" />
+    <Content Include="Resources\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Resources\bootstrap\bootstrap.min.css" />
+    <Content Include="Resources\bootstrap\bootstrap.min.js" />
+    <Content Include="Resources\MultiBindingTest.html" />
+    <Content Include="Resources\home.html" />
+    <Content Include="Resources\FramedWebGLTest.html" />
+    <Content Include="Resources\PopupTest.html" />
+    <Content Include="Resources\DraggableRegionTest.html" />
+    <Content Include="Resources\PostMessageTest.html" />
+    <Content Include="Resources\Recaptcha.html" />
+    <Content Include="Resources\ResponseFilterTest.html" />
+    <Content Include="Resources\SchemeTest.html" />
+    <Content Include="Resources\ScriptedMethodsTest.html" />
+    <Content Include="Resources\UnicodeExampleGreaterThan32kb.html" />
+    <Content Include="Resources\UnocodeExampleEqualTo32kb.html" />
+    <Content Include="Resources\TooltipTest.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CefSharp.Core.Runtime\CefSharp.Core.Runtime.vcxproj" />
+    <ProjectReference Include="..\CefSharp.Core\CefSharp.Core.csproj" />
+    <ProjectReference Include="..\CefSharp\CefSharp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="bin.netcore\**" />
+    <Compile Remove="obj.netcore\**" />
+    <EmbeddedResource Remove="bin.netcore\**" />
+    <EmbeddedResource Remove="obj.netcore\**" />
+    <None Remove="bin.netcore\**" />
+    <None Remove="obj.netcore\**" />
+    <Page Remove="bin.netcore\**" />
+    <Page Remove="obj.netcore\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
